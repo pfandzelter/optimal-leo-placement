@@ -1,3 +1,8 @@
+#
+# Copyright (c) Tobias Pfandzelter. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for details.
+#
+
 import os
 import numpy as np
 import scipy.constants
@@ -81,31 +86,31 @@ SHELLS = [
 SLO = [
     {
         "type": "hops",
-        "t": 1,
+        "d": 1,
     },
     {
         "type": "hops",
-        "t": 4,
+        "d": 4,
     },
     {
         "type": "mean",
         # 10ms * c, convert ms to s and m to km
-        "t": 10 * 0.001 * C,
+        "d": 10 * 0.001 * C,
     },
     {
         "type": "max",
         # 10ms * c, convert ms to s and m to km
-        "t": 10 * 0.001 * C,
+        "d": 10 * 0.001 * C,
     },
         {
         "type": "mean",
         # 100ms * c, convert ms to s and m to km
-        "t": 100 * 0.001 * C,
+        "d": 100 * 0.001 * C,
     },
     {
         "type": "max",
         # 100ms * c, convert ms to s and m to km
-        "t": 100 * 0.001 * C,
+        "d": 100 * 0.001 * C,
     }
 ]
 
@@ -115,15 +120,15 @@ for s in SHELLS:
         print("Calculating distances for {}".format(s["name"]))
 
     # intra-plane distance
-    s["d_intra"] = (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["sats"])))
+    s["D_M"] = (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["sats"])))
     if DEBUG:
-        print("Intra-plane distance: {}".format(s["d_intra"]))
+        print("Intra-plane distance: {}".format(s["D_M"]))
     # max inter distance
-    s["d_inter_max"] = (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["planes"])))
+    s["D_N_max"] = (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["planes"])))
     if DEBUG:
-        print("Max inter-plane distance: {}".format(s["d_inter_max"]))
+        print("Max inter-plane distance: {}".format(s["D_N_max"]))
 
     # mean inter distance
-    s["d_inter_mean"] = (2 / np.pi) * (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["planes"]))) * scipy.special.ellipe(1 - (np.cos(np.deg2rad(s["inc"])))**2)
+    s["D_N_mean"] = (2 / np.pi) * (EARTH_RADIUS + s["altitude"]) * np.sqrt(2 * (1 - np.cos((2*np.pi) / s["planes"]))) * scipy.special.ellipe(1 - (np.cos(np.deg2rad(s["inc"])))**2)
     if DEBUG:
-        print("Mean inter-plane distance: {}".format(s["d_inter_mean"]))
+        print("Mean inter-plane distance: {}".format(s["D_N_mean"]))

@@ -1,9 +1,12 @@
+#
+# Copyright (c) Tobias Pfandzelter. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for details.
+#
+
 import typing
 import numpy as np
 import itertools
 import tqdm
-
-from config import DEBUG
 
 def weighted_lee(a: typing.Tuple[int, int], b: typing.Tuple[int, int], k1: int, k2: int, d1: float, d2: float) -> float:
         return min((a[0] - b[0]) % k1, (b[0] - a[0]) % k1)*d1 + min((a[1] - b[1]) % k2, (b[1] - a[1]) % k2)*d2

@@ -1,3 +1,8 @@
+#
+# Copyright (c) Tobias Pfandzelter. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for details.
+#
+
 import os
 
 import matplotlib
@@ -9,12 +14,12 @@ import config
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 #matplotlib.rcParams['text.usetex'] = True
-sns.set(rc={'figure.figsize':(6,4)}, style="whitegrid", font="CMU Sans Serif")
+sns.set(rc={'figure.figsize':(6,5)}, style="whitegrid", font="CMU Sans Serif")
 
-def save_fig(ax, name, t="pdf"):
+def save_fig(ax, name, file_type="pdf"):
     fig = ax.get_figure()
     fig.tight_layout()
-    file_name = name + "." + t
+    file_name = name + "." + file_type
     fig.savefig(os.path.join(config.GRAPHS_DIR, file_name), bbox_inches='tight')
     fig.clear()
 

@@ -1,3 +1,8 @@
+#
+# Copyright (c) Tobias Pfandzelter. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for details.
+#
+
 import os
 import concurrent.futures
 import typing
@@ -16,7 +21,7 @@ def get_mean_max(name: str):
     }
 
 
-    t_df: typing.List[pd.DataFrame] = []
+    d_df: typing.List[pd.DataFrame] = []
 
     for next_step in tqdm.trange(0, config.STEPS, config.INTERVAL, desc="Shell {}".format(shell_names[name])):
         results_file = os.path.join(config.PLACEMENT_DISTANCES_DIR, "{}-{}.csv".format(name, next_step))
@@ -25,13 +30,13 @@ def get_mean_max(name: str):
 
         df["distance"] = df["distance"] / 1000.0
         df["pair"] = df["n"].astype(str) + "-" + df["rn"].astype(str)
-        df["SLO"] = df["type"].astype(str) + "-" + df["t"].astype(str)
-        df.drop(["type", "t", "slo", "n", "rn"], axis=1, inplace=True)
+        df["SLO"] = df["type"].astype(str) + "-" + df["d"].astype(str)
+        df.drop(["type", "d", "n", "rn"], axis=1, inplace=True)
 
-        t_df.append(df)
+        d_df.append(df)
 
     df_s = pd.DataFrame(columns=["pair", "SLO"])
-    df_s = pd.concat([df_s] + t_df)
+    df_s = pd.concat([df_s] + d_df)
     df_s["Shell"] = shell_names[name]
     print(df_s.head())
 

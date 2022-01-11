@@ -6,13 +6,13 @@ If you use this software in a publication, please cite it as:
 
 ### Text
 
-T. Pfandzelter and D. Bermbach, **QoS-Aware Server and Service Placement on the LEO Edge**, arXiv:2104.02396, January 2022
+T. Pfandzelter and D. Bermbach, **QoS-Aware Resource Placement for LEO Satellite Edge Computing**, arXiv:2104.02396, January 2022
 
 ### BibTeX
 
 ```bibtex
 @article{pfandzelter2022placement,
-    title = "QoS-Aware Server and Service Placement on the LEO Edge",
+    title = "QoS-Aware Resource Placement for LEO Satellite Edge Computing",
     journal = "arXiv:2104.02396",
     author = "Pfandzelter, Tobias and Bermbach, David",
     month = jan,
