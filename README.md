@@ -15,7 +15,7 @@ T. Pfandzelter and D. Bermbach, **QoS-Aware Resource Placement for LEO Satellite
     title = "QoS-Aware Resource Placement for LEO Satellite Edge Computing",
     booktitle = "6th IEEE International Conference on Fog and Edge Computing (ICFEC 2022)",
     author = "Pfandzelter, Tobias and Bermbach, David",
-    year = 2022
+    year = 2022,
     publisher = "IEEE",
 }
 ```
