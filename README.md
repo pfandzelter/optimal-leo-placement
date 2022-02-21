@@ -6,21 +6,21 @@ If you use this software in a publication, please cite it as:
 
 ### Text
 
-T. Pfandzelter and D. Bermbach, **QoS-Aware Resource Placement for LEO Satellite Edge Computing**, arXiv:2201.05872, January 2022
+T. Pfandzelter and D. Bermbach, **QoS-Aware Resource Placement for LEO Satellite Edge Computing**, 6th IEEE International Conference on Fog and Edge Computing (ICFEC 2022), Taormina, Italy, 2022
 
 ### BibTeX
 
 ```bibtex
-@article{pfandzelter2022placement,
+@inproceedings{pfandzelter_optimal:_2022,
     title = "QoS-Aware Resource Placement for LEO Satellite Edge Computing",
-    journal = "arXiv:2201.05872",
+    booktitle = "6th IEEE International Conference on Fog and Edge Computing (ICFEC 2022)",
     author = "Pfandzelter, Tobias and Bermbach, David",
-    month = jan,
     year = 2022
+    publisher = "IEEE",
 }
 ```
 
-Note that this manuscript is still pending publication, but a preprint is available on [arXiv](https://arxiv.org/abs/2201.05872).
+A preprint is available on [arXiv](https://arxiv.org/abs/2201.05872).
 For a full list of publications, please see [our website](https://www.tu.berlin/en/mcc/research/publications/).
 
 ## License
