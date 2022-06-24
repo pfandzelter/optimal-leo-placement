@@ -62,7 +62,7 @@ Run `python3 simulation.py` to generate these distances.
 
 ### SLO Analysis
 
-Run `python3 placement-distances.py` to analyze the distances between shells and resource nodes over time.
+Run `python3 distances.py` to analyze the distances between shells and resource nodes over time.
 
 ### Summarize
 
