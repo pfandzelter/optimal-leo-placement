@@ -50,6 +50,7 @@ SHELLS = [
     # Starlink Shell A
     {
         "name": "st1",
+        "pretty_name": "Starlink A",
         "planes": 72,
         "sats": 22,
         "altitude": 550,
@@ -58,6 +59,7 @@ SHELLS = [
     # Starlink Shell B
     {
         "name": "st2",
+        "pretty_name": "Starlink B",
         "planes": 5,
         "sats": 75,
         "altitude": 1275,
@@ -66,6 +68,7 @@ SHELLS = [
     # Kuiper Shell A
     {
         "name": "ku1",
+        "pretty_name": "Kuiper A",
         "planes": 34,
         "sats": 34,
         "altitude": 630,
@@ -74,6 +77,7 @@ SHELLS = [
     # Kuiper Shell B
     {
         "name": "ku2",
+        "pretty_name": "Kuiper B",
         "planes": 28,
         "sats": 28,
         "altitude": 590,

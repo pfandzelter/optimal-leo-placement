@@ -53,18 +53,14 @@ This includes parameters for the shells as well as service level objectives (SLO
 ### Placement
 
 The placement algorithm can be found in `placement.py`.
-To run the algorthm for the configured shells and SLOs, run `python3 shells.py`.
+To run the algorithm for the configured shells and SLOs, run `python3 shells.py`.
 
 ### Constellation Simulation
 
 The constellation simulation yields ISL distances for the configured shells.
-Run `python3 simulation.py` to generate these distances.
+Run `python3 distances.py` to generate these distances.
 
 ### SLO Analysis
-
-Run `python3 distances.py` to analyze the distances between shells and resource nodes over time.
-
-### Summarize
 
 To summarize the results, run `python3 summarize.py`.
 Results are then available in `results.csv` (depending on your configuration in `config.py`).

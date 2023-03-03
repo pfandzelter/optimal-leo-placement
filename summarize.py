@@ -13,13 +13,7 @@ import tqdm
 import config
 
 def get_mean_max(name: str):
-    shell_names = {
-        "st1": "Starlink A",
-        "st2": "Starlink B",
-        "ku1": "Kuiper A",
-        "ku2": "Kuiper B",
-    }
-
+    shell_names = {s["name"]: s["pretty_name"] for s in config.SHELLS}
 
     d_df: typing.List[pd.DataFrame] = []
 
