@@ -62,6 +62,10 @@ Run `python3 distances.py` to generate these distances.
 
 ### SLO Analysis
 
+Analyze results with `python3 placement-distances.py`.
+
+### Summarize
+
 To summarize the results, run `python3 summarize.py`.
 Results are then available in `results.csv` (depending on your configuration in `config.py`).
 

@@ -1,7 +1,7 @@
 mypy==0.930
 mypy-extensions==0.4.3
 networkx==2.6.3
-numba==0.54.1
+numba==0.56.4
 numpy==1.21.4
 pandas==1.3.5
 PyAstronomy==0.17.0
