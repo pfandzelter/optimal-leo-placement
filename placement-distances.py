@@ -130,4 +130,4 @@ if __name__ == "__main__":
 
     print("Going through simulation steps")
 
-    tqdm.contrib.concurrent.process_map(calculate, [(s["name"], s["planes"], s["sats"], s["rns"], s["considered_rnodes"], s["indices"], t, config.SLO, config.PLACEMENTS_DIR) for s in config.SHELLS for t in range(0, config.STEPS, config.INTERVAL)], chunksize=10, max_workers=os.cpu_count())
+    tqdm.contrib.concurrent.process_map(calculate, [(s["name"], s["planes"], s["sats"], s["rns"], s["considered_rnodes"], s["indices"], t, config.SLO, config.PLACEMENT_DISTANCES_DIR) for s in config.SHELLS for t in range(0, config.STEPS, config.INTERVAL)], chunksize=10, max_workers=os.cpu_count())
